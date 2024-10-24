@@ -10,11 +10,8 @@ def initials_generator(personsName):
     personsInitials = "" + str(personsName)
 
     for character in personsInitials:
-        if character.isupper() is True:
-            personsInitials.__add__(character)
-
         if character.isupper() is False:
-            personsInitials.strip(personsInitials.lower())
+            character.replace(personsInitials, "")
 
     return personsInitials.strip()
 
