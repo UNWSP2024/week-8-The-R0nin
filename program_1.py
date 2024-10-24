@@ -6,19 +6,17 @@
 # Add your logic starting on line 11
 
 def initials_generator(personsName):
-    # place string of personsname into personsinitail string
+
     personsInitials = ""
     personsInitials.replace("", personsName)
-    
-    #for loop for uppercase character checking
-    for character in personsInitials:
-        personsInitials.replace(personsName, personsInitials.find(character.isupper()))
-        
-    
-    #place dot inbetween the initials
-    personsInitials.split('.')
 
-    #IDK what this is for or what to do with it
+    for character in personsInitials:
+        if character.isupper() is True:
+            personsInitials.__add__(character)
+
+        if character.isupper() is False:
+            personsInitials.replace(personsInitials.islower(),'')
+            
     return personsInitials.strip()
 
 personsName = input('Enter the users first, middle, and last name: ')
