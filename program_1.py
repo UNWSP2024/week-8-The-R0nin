@@ -7,11 +7,11 @@
 
 def initials_generator(personsName):
 
-    personsInitials = "" + str(personsName)
+    personsInitials = ""
 
-    for character in personsInitials:
-        if character.isupper() is False:           
-            personsInitials = character + '.' + ''
+    for character in str(personsName):
+        if character.isupper() is True:           
+            personsInitials = personsInitials + character + '.' + ''
             
     return personsInitials.strip()
 
