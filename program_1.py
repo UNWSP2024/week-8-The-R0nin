@@ -10,9 +10,9 @@ def initials_generator(personsName):
     personsInitials = "" + str(personsName)
 
     for character in personsInitials:
-        if character.isupper() is False:
-            character.replace(personsInitials, "")
-
+        if character.isupper() is False:           
+            personsInitials = character + '.' + ''
+            
     return personsInitials.strip()
 
 personsName = input('Enter the users first, middle, and last name: ')
