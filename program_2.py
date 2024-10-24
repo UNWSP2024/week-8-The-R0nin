@@ -13,8 +13,9 @@ def word_separator(sentence):
 
     for character in str(sentence):
         if character.isupper():
+            character = ' ' + character
             character = character.lower()
-        new_sentence = new_sentence + ' ' + character
+        new_sentence = new_sentence + character
 
     return new_sentence.strip('/')
 
@@ -23,5 +24,7 @@ def word_separator(sentence):
 sentence = "StopAndSmellTheRoses"
 
 new_sentence = word_separator(sentence)
+
+print(new_sentence)
 
 print(new_sentence)
