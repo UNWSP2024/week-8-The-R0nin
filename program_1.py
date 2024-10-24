@@ -7,16 +7,15 @@
 
 def initials_generator(personsName):
 
-    personsInitials = ""
-    personsInitials.replace("", personsName)
+    personsInitials = "" + str(personsName)
 
     for character in personsInitials:
         if character.isupper() is True:
             personsInitials.__add__(character)
 
         if character.isupper() is False:
-            personsInitials.replace(personsInitials.islower(),'')
-            
+            personsInitials.strip(personsInitials.lower())
+
     return personsInitials.strip()
 
 personsName = input('Enter the users first, middle, and last name: ')
