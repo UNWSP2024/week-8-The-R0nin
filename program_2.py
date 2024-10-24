@@ -11,12 +11,12 @@ def word_separator(sentence):
 
     new_sentence = ""
 
-    for character in str(sentence):
+    for character in str(sentence[1:]):
         if character.isupper():
             character = ' ' + character
             character = character.lower()
         new_sentence = new_sentence + character
-
+    new_sentence = str(sentence[0]) + new_sentence
     return new_sentence.strip('/')
 
 # Example usage
@@ -24,7 +24,5 @@ def word_separator(sentence):
 sentence = "StopAndSmellTheRoses"
 
 new_sentence = word_separator(sentence)
-
-print(new_sentence)
 
 print(new_sentence)
