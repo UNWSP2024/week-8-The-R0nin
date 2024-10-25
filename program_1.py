@@ -8,11 +8,14 @@
 def initials_generator(personsName):
 
     personsInitials = ""
-    #    Add your logic here
 
+    for character in str(personsName):
+        if character.isupper() is True:           
+            personsInitials = personsInitials + character + '.' + ''
+            
     return personsInitials.strip()
 
-personsName = input('Enter the users first, middle, and last name')
+personsName = input('Enter the users first, middle, and last name: ')
 
 initials = initials_generator(personsName)
 
