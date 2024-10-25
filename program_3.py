@@ -24,13 +24,13 @@ American_States = {'Alabama':'Montgomery', 'Alaska':'Juneau', 'Arizona':'Phoenix
                    'Utah':'Salt Lake City', 'Vermont':'Montpelier', 'Virginia':'Richmond', 
                    'Washington':'Olympia', 'West Virginia':'Charleston', 'Wisconsin':'Madison', 
                    'Wyoming':'Cheyenne',}
+
 def state_quiz():
-    i = random.randrange(0,50)
-    question = input('What is the captial of ', American_States.get('state'[i]))
-    if question in American_States.values([i]) is True:
+    question = input('What is the capital of', (random.choice(list(American_States.keys()))))
+    if question == list(American_States.fromkeys(question)):
         print('correct')
     else:
-        print('Incorrect, The Answer is ',{American_States.get['country'[i]:'capital']})
+        print('Incorrect, The Answer is ',{American_States.fromkeys[:'capital']})
     state_quiz()
 
 print(state_quiz())
