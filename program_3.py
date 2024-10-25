@@ -25,10 +25,12 @@ American_States = {'Alabama':'Montgomery', 'Alaska':'Juneau', 'Arizona':'Phoenix
                    'Washington':'Olympia', 'West Virginia':'Charleston', 'Wisconsin':'Madison', 
                    'Wyoming':'Cheyenne',}
 def state_quiz():
-    i = random.randint[0,50]
+    i = random.randrange(0,50)
     question = input('What is the captial of {American_States[i]}')
     if question in American_States[i] is True:
         print('correct')
     else:
         print('Incorrect, The Answer is {American_States[i]}')
     state_quiz()
+
+print(state_quiz())
