@@ -29,9 +29,9 @@ def state_quiz():
     state = random.choice(list(American_States.keys()))
     print('What is the capital of', state)
     question = input('')
-    if question == list(American_States.values()):
+    if question == American_States[state]:
         print('correct')
     else:
-        print('Incorrect')
+        print('Incorrect, the correct answer is ', American_States[state])
     
 state_quiz()
